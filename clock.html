@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock with Alarm</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: #61dafb;
+        }
+        #clock {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        #date {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        .alarm-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .alarm-container input {
+            padding: 10px;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        .alarm-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #61dafb;
+            color: #282c34;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .alarm-container button:hover {
+            background-color: #21a1f1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="clock">00:00:00</div>
+    <div id="date">Loading date...</div>
+    <div class="alarm-container">
+        <input type="time" id="alarm-time" />
+        <button id="set-alarm">Set Alarm</button>
+        <button id="clear-alarm">Clear Alarm</button>
+    </div>
+    <audio id="alarm-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
